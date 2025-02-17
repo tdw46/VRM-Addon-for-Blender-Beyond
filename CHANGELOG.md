@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.35.0](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/compare/v2.34.1...v2.35.0) (2025-02-17)
+
+
+### 🚀 Features
+
+* add a setting to export gltf animation or not ([bd5b2d3](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/bd5b2d3d0aaa9819969f4721660439a533ec5849))
+* skip blender 3.1.2 workaround in new blender ([0dc0b72](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/0dc0b721cbd59e166bde35d867a7cf673ff51864))
+
+
+### 🐞 Bug Fixes
+
+* add workaround for non-weighted skinned mesh export error ([a47a0d2](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/a47a0d289ea07527da24e63072601ed05eaae357))
+* export error during automatic modifier application ([48f526b](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/48f526b8ca98992f7df1beb19a72a648911506cf))
+* prevent skinned mesh node parenting to make gltf validator happy ([1222f26](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/1222f2647d3959005fcba4e59a0797188d30008f))
+* regenerate release archives ([12e75bb](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/12e75bbc6576effeb61cfe193a6b2efe7bf695e5))
+* unexpected constrainted node rotation on export ([90809f0](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/90809f03bd3f07a5b8747e56802cd927a425ed73))
+* VRM export causes unexpected constrainted bone rotation ([2425087](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/2425087a43b3f29f05a69fbf23745c2590cf54c8))
+
+
+### 📝 Documentation
+
+* remove deunnecessary notice ([24532bf](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/24532bf55d9a38420b731dd0d9637207cb57cff2))
+
 ## [2.34.1](https://github.com/saturday06/VRM-Addon-for-Blender/compare/v2.34.0...v2.34.1) (2025-01-15)
 
 
