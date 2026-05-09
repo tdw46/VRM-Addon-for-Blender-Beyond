@@ -1,5 +1,64 @@
 # Changelog
 
+## [5.0.0](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/compare/v4.1.1...v5.0.0) (2026-05-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* trigger major release pipeline
+
+### 🚀 Features
+
+* add mode to ignore Human Bone hierarchy constraints and reconstruct on export ([d8b9ef8](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/d8b9ef8cdc37d8fb900a9365d3e229042acfc31c))
+* add thumbnail preview to VRM import license warning dialog ([236b290](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/236b2902aa0413d4816a76810f2f5befae85871e))
+* auto-set renderQueueOffsetNumber in VRM0 MToon0 import using UniVRM migration logic ([9f61835](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/9f6183533fd77fcdd1750b51756cb79eadb225df))
+* bone eyedropper submenu ([4e871cb](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/4e871cbda1723d52a70804f2ec278e0854e66776))
+* enhanced support for reading well-known models such as VRC, MMD, and RPM ([73a39c5](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/73a39c59d976dbcff463efa6c0ed6b12523d69b7))
+* hide make_new_texture_folder when extract_textures_into_folder is disabled ([13e9da9](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/13e9da994f10ee0fb212a13c7b3ef9a80355d465))
+* implement ui list filters ([1af39e5](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/1af39e5ca713d26103e7e43def78dd5364458cbb))
+* preprocess and merge duplicated joint weights ([0770e1d](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/0770e1d1b453748eb5c67d56baf0428a1f27cf80))
+* revert general bone selector to default behaviour ([354e76c](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/354e76c647e80fb26d9090b9c95cc8a26b2ce439))
+* show glTF add-on diagnostics in the error dialog ([fb8e4e9](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/fb8e4e975348bac7b038836289f3c01388a20ef5))
+* springbone migration from VRM 0.0 to VRM 1.0 ([a4896ce](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/a4896ce9b1673d2d5579b9d312815f2764449153))
+* structure-based human bone auto assignment ([32cb02b](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/32cb02b1f89838115872f214b065d29218c769b1))
+* support blender 5.1 ([a73d13a](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/a73d13aa39a23b228897ee9acba0f7f92e65937f))
+* the displayed armature is now selected by default ([6691a9d](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/6691a9d53ff6428377f3123cfba3a749118f8450))
+
+
+### 🐛 Bug Fixes
+
+* corrected the generation order of MToon outlines ([9d0075c](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/9d0075ccf8292667e9794003da0f18e861c93514))
+* fix a bug where getting or setting rotation in axis-angle mode produced invalid values ([06e7e37](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/06e7e37249e047f74f7b2b4bffcb08737c479d25))
+* fix a bug where VRM0 export fails when certain shader nodes are present ([86972fa](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/86972faae3e9d270b3edde339b4ca0ed3e0bbc2e))
+* fix a bug where VRM0's automatic bone assignment could sometimes fail ([37f687f](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/37f687f5f20aad07db07d2fb0f5303f3c2d0dece))
+* fix a freeze that occurred when loading a blend file ([dacaf02](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/dacaf021d45d6c70a95a1e21ff83a6651802449a))
+* fix bug where third-party colliders were merged automatically without intention ([664048f](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/664048fddef1bfcec1f85fc083f42af9e736a197))
+* fix collider reparent error on save ([11d7675](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/11d7675b4f85ac4f226fd81b7528c5babf19c7b9))
+* fix export error when a Null Constraint is present in the file ([8fc941b](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/8fc941b563ad06f6e6392d60d2f7559b4d89a968))
+* fix random crash on load or migrate armature ([adb9fa2](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/adb9fa2b4216dcfc6bfa98bd75b24f412bf0d51d))
+* fix shape key values being lost during VRM export ([6f02137](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/6f0213756491e94f60f5b34a137cbfb4816b2015))
+* fix unfriendly vrm 1.0 image buffer alignments ([4c528da](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/4c528da1b4f0ce9f975febe385e20fffdab8fe44))
+* fixed a bug in edge cases during image filename generation ([8be2a88](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/8be2a881827fef4f7e2b5f11e3e3fba688de011a))
+* fixed a bug that caused alpha clip node switching to fail ([b522389](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/b5223899b9b13aca30cf1ff44f182e88e2315494))
+* fixed a bug that caused glTF alpha mask mode material output to fail ([53490f9](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/53490f91d3ffa72a47f895b9b911809ee1618227))
+* fixed a bug where exporting VRM 0 models in Blender 5.1 had become extremely slow ([682528f](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/682528f39ab7d1f0e5c4f20c3ebebb45e42d2a21))
+* fixed a bug where expression animations might not be reflected when manually moving the timeline ([b34eca5](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/b34eca5eb4889d511e97ba810aa1536cf477ca8f))
+* fixed a bug where expression names might not be set correctly ([49c10c4](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/49c10c487d04a482f38300ca4c202ad0f011a7a9))
+* fixed a bug where unregistered shape keys were accidentally baked ([dc0b659](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/dc0b659be78b5c759bf5980321cd1293a2e3058c))
+* fixed a bug where vrm files sometimes failed to load on Windows ([c00a62b](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/c00a62bd51bef1059c474230d4e41c9066a0a282))
+* fixed a bug where VRM import would fail if the entire viewport's armature was hidden ([bac1256](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/bac12560ea8bf0ce8d16bbbb979f0aa249d900ac))
+* improve URI handling in read_accessor_as_bytes function ([b0279c8](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/b0279c8c97d7c6444febf887c077fa430028dcc7))
+* **io_scene_vrm:** potential denial of service via extremely large re ([5adffea](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/5adffea46328c7b96b7afef63e2e4f5839c0cb65))
+* optimize bone mapping generation performance ([188c5cf](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/188c5cf390943a351b5f63fdc59c61dc3ee01c4d))
+* prevent duplicate image buffer data on export ([af4c953](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/af4c9535128ffe5e1b7ca3b76d4ab9fa822fbd26)), closes [#579](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/issues/579)
+* remove unnecessary cache update on save blend file ([3212b90](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/3212b90f649e049d7f3ad4c5ba176b3f596db379))
+* restart the release pipeline because it did not complete successfully ([4391116](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/4391116a283843f26e09ab8e434bc31e0387d627))
+* trigger major release pipeline ([36e524e](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/36e524e9eb554918a71f07166ea094452a1a4c8e))
+* trigger release pipeline ([1eab977](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/1eab977effbfe82475942b489fdee1a62f9dea0c))
+* trigger release pipeline ([0fbf4a4](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/0fbf4a43f16396ca346571356652138c76db0e88))
+* tweak Simplified Chinese translation ([adb530a](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/adb530a58d74b5480c11d9e436a1e473724339bf))
+* update buffer alignment from 32 to 4 bytes in animation export functions ([d3348f1](https://github.com/tdw46/VRM-Addon-for-Blender-Beyond/commit/d3348f129c629dbd589c5da098b7a46159739a43))
+
 ## [4.1.1](https://github.com/saturday06/VRM-Addon-for-Blender/compare/v4.1.0...v4.1.1) (2026-05-08)
 
 
