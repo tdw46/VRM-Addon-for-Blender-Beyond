@@ -710,7 +710,19 @@ class Vrm1LookAtPropertyGroup(PropertyGroup):
 
     @staticmethod
     def update_all_previews(context: Context) -> None:
-        for armature_object in context.visible_objects:
+        objects = getattr(context, "visible_objects", None)
+        if objects is None:
+            # Render handlers have no View3D context in Blender 5.2. Keep
+            # look-at evaluation on the render's view layer using public RNA.
+            view_layer = getattr(context, "view_layer", None)
+            if view_layer is None:
+                return
+            objects = tuple(
+                obj
+                for obj in view_layer.objects
+                if obj.visible_get(view_layer=view_layer)
+            )
+        for armature_object in objects:
             if armature_object.type != "ARMATURE":
                 continue
             armature_data = armature_object.data
